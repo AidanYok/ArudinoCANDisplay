@@ -11,19 +11,18 @@ def getData(sData):
         data = data + str(sData[i])
     return data
     
-def preprocess(refreshRate, loggedMsg):
+def preprocess(loggedMsg):
     beginTime =time.time()
     ser=serial.Serial("/dev/ttyACM0",115200)  
     
-    while (time.time() - beginTime < refreshRate):
-        read_ser=ser.readline()
-        if read_ser == None:
+    read_ser=ser.readline()
+    if read_ser == None:
+        pass
+    else:
+        serialData = read_ser.split()
+        if (len(serialData) < 5):
             pass
         else:
-            serialData = read_ser.split()
-            if (len(serialData) < 5):
-                pass
-            else:
-                print(read_ser)
-                if getId(serialData) in loggedMsg:
-                    loggedMsg[getId(serialData)] = getData(serialData)
+            print(read_ser)
+            if getId(serialData) in loggedMsg:
+                loggedMsg[getId(serialData)] = getData(serialData)
