@@ -17,7 +17,13 @@ def preprocess(refreshRate, loggedMsg):
     
     while (time.time() - beginTime < refreshRate):
         read_ser=ser.readline()
-        serialData = read_ser.split(" ")
-
-        if getId(serialData) in loggedMsg:
-            loggedMsg[getId(serialData)] = getData(serialData)
+        if read_ser == None:
+            pass
+        else:
+            serialData = read_ser.split()
+            if (len(serialData) < 5):
+                pass
+            else:
+                print(read_ser)
+                if getId(serialData) in loggedMsg:
+                    loggedMsg[getId(serialData)] = getData(serialData)
