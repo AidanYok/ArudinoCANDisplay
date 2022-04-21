@@ -1,0 +1,134 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: PCM CAV
+
+
+BO_ 1077 PcmToCav6: 8 PCM
+ SG_ PcmToCav6_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1061 CavToPcmLongCtrl6: 8 CAV
+ SG_ CavToPcmLong6_PV : 24|31@0+ (1,0) [0|2147483647] "" Vector__XXX
+ SG_ CavToPcmLong6_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1060 CavToPcmLongCtrl5: 8 CAV
+ SG_ CavToPcmLong5_PV : 24|31@0+ (1,0) [0|2147483647] "" Vector__XXX
+ SG_ CavToPcmLong5_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1059 CavToPcmLongCtrl4: 8 CAV
+ SG_ CavToPcmLong4_PV : 24|31@0+ (1,0) [0|2147483647] "" Vector__XXX
+ SG_ CavToPcmLong4_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1045 CavToPcmLateralCtrl6: 8 CAV
+ SG_ CavToPcmLat6_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CavToPcmLat6_PV : 24|31@0+ (1,0) [0|2147483647] "" Vector__XXX
+
+BO_ 1044 CavToPcmLateralCtrl5: 8 CAV
+ SG_ CavToPcmLat5_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CavToPcmLat5_PV : 24|31@0+ (1,0) [0|2147483647] "" Vector__XXX
+
+BO_ 1043 CavToPcmLateralCtrl4: 8 CAV
+ SG_ CavToPcmLat4_PV : 24|31@0+ (1,0) [0|2147483647] "" Vector__XXX
+ SG_ CavToPcmLat4_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1058 CavToPcmLongCtrl3: 8 CAV
+ SG_ CavToPcmLong3_PV : 24|31@0+ (1,0) [0|2147483647] "" Vector__XXX
+ SG_ CavToPcmLong3_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1057 CavToPcmLongCtrl2: 8 CAV
+ SG_ CavToPcmLong2_PV : 24|31@0+ (1,0) [0|2147483647] "" Vector__XXX
+ SG_ CavToPcmLong2_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1056 CavToPcmLongCtrl1: 8 CAV
+ SG_ obj1_vel : 12|11@1+ (0.125,0) [-128|128.875] "" Vector__XXX
+ SG_ obj1_pos : 0|12@1+ (0.125,0) [-256|255.875] "" Vector__XXX
+ SG_ CavToPcmLong1_PV : 31|4@0+ (1,0) [0|2.14748e+09] "" Vector__XXX
+ SG_ CavToPcmLong1_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1042 CavToPcmLateralCtrl3: 8 CAV
+ SG_ CavToPcmLat3_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CavToPcmLat3_PV : 24|31@0+ (1,0) [0|2147483647] "" Vector__XXX
+
+BO_ 1041 CavToPcmLateralCtrl2: 8 CAV
+ SG_ CavToPcmLat2_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CavToPcmLat2_PV : 24|31@0+ (1,0) [0|2147483647] "" Vector__XXX
+
+BO_ 1040 CavToPcmLateralCtrl1: 8 CAV
+ SG_ CavToPcmLat1_PV : 24|31@0+ (1,0) [0|2147483647] "" Vector__XXX
+ SG_ CavToPcmLat1_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1076 PcmToCav5: 8 PCM
+ SG_ PcmToCav5_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1075 PcmToCav4: 8 PCM
+ SG_ PcmToCav4_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1074 PcmToCav3: 8 PCM
+ SG_ PcmToCav3_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1073 PcmToCav2: 8 PCM
+ SG_ PcmToCav2_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1072 PcmToCav1: 8 PCM
+ SG_ long_swch_stat : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ connect_swch_stat : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ veh_spd : 0|16@1+ (0.001,0) [0|65.535] "" Vector__XXX
+ SG_ PcmToCav1_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+
+
+
+BA_DEF_ BO_  "AppGenMsgCycleTime" INT 0 0;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "AppGenMsgCycleTime" 0;
+BA_DEF_DEF_  "BusType" "";
+BA_ "AppGenMsgCycleTime" BO_ 1077 20;
+BA_ "AppGenMsgCycleTime" BO_ 1061 40;
+BA_ "AppGenMsgCycleTime" BO_ 1060 40;
+BA_ "AppGenMsgCycleTime" BO_ 1059 40;
+BA_ "AppGenMsgCycleTime" BO_ 1045 40;
+BA_ "AppGenMsgCycleTime" BO_ 1044 40;
+BA_ "AppGenMsgCycleTime" BO_ 1043 40;
+BA_ "AppGenMsgCycleTime" BO_ 1058 40;
+BA_ "AppGenMsgCycleTime" BO_ 1057 40;
+BA_ "AppGenMsgCycleTime" BO_ 1056 40;
+BA_ "AppGenMsgCycleTime" BO_ 1042 40;
+BA_ "AppGenMsgCycleTime" BO_ 1041 40;
+BA_ "AppGenMsgCycleTime" BO_ 1040 40;
+BA_ "AppGenMsgCycleTime" BO_ 1076 20;
+BA_ "AppGenMsgCycleTime" BO_ 1075 20;
+BA_ "AppGenMsgCycleTime" BO_ 1074 20;
+BA_ "AppGenMsgCycleTime" BO_ 1073 20;
+BA_ "AppGenMsgCycleTime" BO_ 1072 20;
+

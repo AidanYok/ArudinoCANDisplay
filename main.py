@@ -1,10 +1,11 @@
 #import preProcessing
 from tkinter import *
-
+import dbcManager as dbc
 msgs = ['43C', '038']
-
+sigs = ['obj1_pos']
 
 loggedMsg = dict.fromkeys(msgs)
+sigVals = dict.fromkeys(sigs)
 
 root = Tk()
 root.geometry("800x400")
@@ -13,11 +14,18 @@ grid = Frame(root)
 def updateMsgs(loggedMsg):
     #preProcessing.preprocess(loggedMsg)
     print(loggedMsg)
+    for i in msgs:
+        for j in sigs:
+        try:
+            sigVals[sigs] = dbc.deCode(i, j, loggedMsg[i])
+        except:
+            pass
+
     root.after(5, updateMsgs)
 
 root.after(5,updateMsgs(loggedMsg))
 
-engTemp = Label(grid, text = 'engTemp: ' + str(loggedMsg['43C']))
+engTemp = Label(grid, text = 'engTemp: ' + str(sigVals['obj1_pos']))
 battTemp = Label(grid, text = 'battTemp: ' + str(loggedMsg['43C']))
 eRadTemp = Label(grid, text = 'eRadTemp: ' + str(loggedMsg['43C']))
 battSOC = Label(grid, text = 'battSOC: ' + str(loggedMsg['43C']))
