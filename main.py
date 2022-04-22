@@ -13,19 +13,6 @@ root = Tk()
 root.geometry("800x400")
 grid = Frame(root)
 
-def updateMsgs(loggedMsg):
-    preProcessing.preprocess(loggedMsg)
-    for i in msgs:
-        for j in sigs:
-            try:
-                sigVals[sigs] = dbc.deCode(i, j, loggedMsg[i].encode('UTF-8'))
-            except:
-                pass
-    root.after(1000, updateMsgs(loggedMsg))
-
-updateMsgs(loggedMsg)
-while True:
-    print(sigVals['MotP0Temp'])
 
 engTemp = Label(grid, text = 'engTemp: ' + str(sigVals['obj1_pos']))
 battTemp = Label(grid, text = 'battTemp: ' + str(sigVals['MotP0Temp']))
@@ -48,6 +35,21 @@ battTemp.grid(row = 0, column = 1)
 #cavFaults.grid(row = 1, column = 3)
 
 grid.pack(expand=True)
+
+def updateMsgs(loggedMsg):
+    preProcessing.preprocess(loggedMsg)
+    for i in msgs:
+        for j in sigs:
+            try:
+                sigVals[sigs] = dbc.deCode(i, j, loggedMsg[i].encode('UTF-8'))
+            except:
+                pass
+    root.after(1000, updateMsgs(loggedMsg))
+
+updateMsgs(loggedMsg)
+
+while True:
+    print(sigVals['MotP0Temp'])
 
 # root.attributes('-fullscreen', True)
 root.mainloop()
