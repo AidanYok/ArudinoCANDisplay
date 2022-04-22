@@ -1,4 +1,3 @@
-import preProcessing
 import fakeData
 from tkinter import *
 import dbcManager as dbc
@@ -26,7 +25,7 @@ def main():
 
     def updateMsgs(loggedMsg, root):
         while True:
-            loggedMsg = preProcessing.preprocess(loggedMsg)
+            loggedMsg = fakeData.preprocess(loggedMsg)
             for i in msgs:
                 for j in sigs:
                     if (loggedMsg[i] != None):
