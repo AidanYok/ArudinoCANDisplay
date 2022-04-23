@@ -5,8 +5,8 @@ import time
 from threading import *
 
 def main():
-    msgs = ['CavToPcmLongCtrl1', 'PcmToCav1']
-    sigs = ['obj1_pos','veh_spd']
+    msgs = ['CavToPcmLongCtrl1', 'PcmToCav1', 'PcmToCav2']
+    sigs = ['obj1_pos','veh_spd', 'BattSOC']
 
     loggedMsg = dict.fromkeys(msgs)
     sigVals = dict.fromkeys(sigs)

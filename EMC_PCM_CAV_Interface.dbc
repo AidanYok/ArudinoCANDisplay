@@ -74,7 +74,7 @@ BO_ 1057 CavToPcmLongCtrl2: 8 CAV
 BO_ 1056 CavToPcmLongCtrl1: 8 CAV
  SG_ obj1_vel : 12|11@1+ (0.125,0) [-128|128.875] "" Vector__XXX
  SG_ obj1_pos : 0|12@1+ (0.125,0) [-256|255.875] "" Vector__XXX
- SG_ CavToPcmLong1_PV : 31|4@0+ (1,0) [0|2.14748e+09] "" Vector__XXX
+ SG_ CavToPcmLong1_PV : 31|4@0+ (1,0) [0|2147480000] "" Vector__XXX
  SG_ CavToPcmLong1_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
 
 BO_ 1042 CavToPcmLateralCtrl3: 8 CAV
@@ -99,6 +99,13 @@ BO_ 1074 PcmToCav3: 8 PCM
  SG_ PcmToCav3_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
 
 BO_ 1073 PcmToCav2: 8 PCM
+ SG_ egoDistance : 40|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ vehDetected : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ eRadTemp : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EngTemp : 24|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BattCurrent : 16|8@1+ (1,0) [-128|127] "" Vector__XXX
+ SG_ BattTemp : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BattSOC : 0|7@1+ (1,0) [0|127] "%" Vector__XXX
  SG_ PcmToCav2_RC : 57|2@0+ (1,0) [0|3] "" Vector__XXX
 
 BO_ 1072 PcmToCav1: 8 PCM

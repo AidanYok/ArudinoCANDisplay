@@ -14,7 +14,7 @@ def getData(sData):
 
 def preprocess(loggedMsg):
     time.sleep(0.2)
-    randSig = random.choice(list(loggedMsg.keys()))
-    loggedMsg[randSig] = secrets.token_hex(14)
+    for msg in loggedMsg:
+        loggedMsg[msg] = secrets.token_hex(14)
 
     return loggedMsg
