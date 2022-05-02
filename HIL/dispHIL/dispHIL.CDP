@@ -89,6 +89,122 @@
 				<ItemInfoDescr type="key"/>
 				<ItemInfoAddInfoDb type="key"/>
 				<ItemInfoAuthor type="key">uweco</ItemInfoAuthor>
+				<item>
+					<Component type="key">VariablesManagement</Component>
+					<Name type="key">dispHIL.vdb</Name>
+					<DisplayName type="key">C:\Users\UWECOCAR3\Desktop\aiiiiiiiidan\Git\ArudinoCANDisplay\HIL\dispHIL\Variable Descriptions\dispHIL.vdb</DisplayName>
+					<Path type="key">.\Variable Descriptions</Path>
+					<Flags type="key">276</Flags>
+					<Type type="key">18</Type>
+					<UniqueID type="key">281062005</UniqueID>
+					<EntityID type="key">{FBB275CD-F68F-4B8F-BBD8-3494ECA9B99C}</EntityID>
+					<ItemInfoDate type="key">5/2/2022 10:31:33 AM</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">UWECOCAR3</ItemInfoAuthor>
+				</item>
+				<item>
+					<Component type="key">VariablesManagement</Component>
+					<Name type="key">hiltest.sdf</Name>
+					<DisplayName type="key">hiltest.sdf</DisplayName>
+					<Path type="key">.\Variable Descriptions\hiltest.sdf</Path>
+					<Flags type="key">18704</Flags>
+					<Type type="key">7</Type>
+					<UniqueID type="key">774489842</UniqueID>
+					<EntityID type="key">{30B242AB-FC3B-44FD-ADDB-0F8DEF1E9AAA}</EntityID>
+					<ItemInfoDate type="key">5/2/2022 10:31:32 AM</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoLog type="key">
+Original file added from ..\hiltest.sdf [2022-05-02 17:28:06 (UTC)]
+
+Variable description reloaded on 02.05.2022 10:39:27 (C:\Users\UWECOCAR3\Desktop\aiiiiiiiidan\Git\ArudinoCANDisplay\HIL\hiltest.sdf)
+Original file added from ..\hiltest.sdf [2022-05-02 17:38:25 (UTC)]
+</ItemInfoLog>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">UWECOCAR3</ItemInfoAuthor>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">hiltest.trc</Name>
+						<DisplayName type="key">hiltest.trc</DisplayName>
+						<Path type="key">.\Variable Descriptions\hiltest.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">69501839</UniqueID>
+						<EntityID type="key">{0E8A4A6F-EF19-4EF9-A630-194B756CDE8E}</EntityID>
+						<ItemInfoDate type="key">5/2/2022 10:39:27 AM</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">UWECOCAR3</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">hiltest.map</Name>
+						<DisplayName type="key">hiltest.map</DisplayName>
+						<Path type="key">.\Variable Descriptions\hiltest.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">797476879</UniqueID>
+						<EntityID type="key">{43BA6B85-3719-4308-89D4-0F5C7DFA4DD6}</EntityID>
+						<ItemInfoDate type="key">5/2/2022 10:39:27 AM</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">UWECOCAR3</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">hiltest.x86</Name>
+						<DisplayName type="key">hiltest.x86</DisplayName>
+						<Path type="key">.\Variable Descriptions\hiltest.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">30</Type>
+						<UniqueID type="key">342103517</UniqueID>
+						<EntityID type="key">{1DDDC967-57C9-42E7-9E24-72E83C1789AB}</EntityID>
+						<ItemInfoDate type="key">5/2/2022 10:39:27 AM</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">UWECOCAR3</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">hiltest.trz</Name>
+						<DisplayName type="key">hiltest.trz</DisplayName>
+						<Path type="key">.\Variable Descriptions\hiltest.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">312484631</UniqueID>
+						<EntityID type="key">{D61381ED-B593-4A97-81AB-D7AADA10ED8A}</EntityID>
+						<ItemInfoDate type="key">5/2/2022 10:39:27 AM</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">UWECOCAR3</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">hiltest_RTICANMM.cancfg</Name>
+						<DisplayName type="key">hiltest_RTICANMM.cancfg</DisplayName>
+						<Path type="key">.\Variable Descriptions\hiltest.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">121543742</UniqueID>
+						<EntityID type="key">{9CB13332-DB7C-4770-A106-4E4797E9DF2D}</EntityID>
+						<ItemInfoDate type="key">5/2/2022 10:39:27 AM</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">UWECOCAR3</ItemInfoAuthor>
+					</item>
+				</item>
 			</item>
 			<item>
 				<Targets type="key">datasetmanager</Targets>
@@ -96,7 +212,7 @@
 				<DisplayName type="key">Data Sets</DisplayName>
 				<Path type="key">.</Path>
 				<Flags type="key">260</Flags>
-				<Type type="key">3</Type>
+				<Type type="key">29</Type>
 				<UniqueID type="key">541320306</UniqueID>
 				<EntityID type="key">{78B8BFCB-FD38-466A-890E-3A7B82954D63}</EntityID>
 				<ItemInfoDate type="key">5/2/2022 10:17:45 AM</ItemInfoDate>
@@ -217,6 +333,22 @@
 			<ItemInfoAddInfoDb type="key"/>
 			<ItemInfoAuthor type="key">uweco</ItemInfoAuthor>
 		</experiment>
+		<experiment>
+			<Creator type="key">ControlDesk</Creator>
+			<MigrationHistory type="key"/>
+			<Name type="key">CAVPCMSim.CDE</Name>
+			<DisplayName type="key">CAVPCMSim</DisplayName>
+			<Path type="key">.\CAVPCMSim</Path>
+			<Flags type="key">4096</Flags>
+			<Type type="key">2</Type>
+			<UniqueID type="key">130524982</UniqueID>
+			<EntityID type="key">{DA554864-471B-42AB-A750-1A9994924272}</EntityID>
+			<ItemInfoDate type="key">5/2/2022 10:31:31 AM</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">UWECOCAR3</ItemInfoAuthor>
+		</experiment>
 	</experiments>
 	<BusNavigator/>
 	<VariablesManagement/>
@@ -227,13 +359,15 @@
 		<PythonVersion type="key">3.6</PythonVersion>
 	</Interpreter>
 	<ProjectExperiment>
-		<LastActiveExperiment type="key">PCMCAVSim</LastActiveExperiment>
+		<LastActiveExperiment type="key">CAVPCMSim</LastActiveExperiment>
 	</ProjectExperiment>
 	<Instrumentation Version="1">
 		<UniqueIds Version="3">
-			<Count type="key">1</Count>
+			<Count type="key">2</Count>
 			<File1 type="key">PCMCAVSim/Layout1</File1>
 			<Id1 type="key">0</Id1>
+			<File2 type="key">CAVPCMSim/Layout1</File2>
+			<Id2 type="key">1</Id2>
 		</UniqueIds>
 	</Instrumentation>
 	<DiagnosticsManagement/>

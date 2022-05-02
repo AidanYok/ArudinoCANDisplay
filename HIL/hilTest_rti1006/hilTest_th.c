@@ -4,12 +4,12 @@
 
    Task Configuration file for model : hilTest
 
-   RTI1006 7.14 (02-May-2020)/2.20
-   02-May-2022 10:16:48
+   RTI1006 7.13 (02-Nov-2019)/2.18
+   02-May-2022 10:38:14
 
-   MATLAB 9.7.0.1261785 (R2019b) Update 3
+   MATLAB 9.7.0.1190202 (R2019b)
 
-   Copyright 2019, dSPACE GmbH. All rights reserved.
+   Copyright (c) 1993-2002 dSPACE GmbH, GERMANY
 
  *****************************************************************************/
 

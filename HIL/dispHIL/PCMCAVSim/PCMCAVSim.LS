@@ -24,7 +24,7 @@
 				</item>
 				<item>
 					<Name type="key">Hardware Configurations</Name>
-					<ViewFlags type="key">1</ViewFlags>
+					<ViewFlags type="key">5</ViewFlags>
 					<item>
 						<Name type="key">4ff32adb-933b-4129-8dfb-11e9db20892e</Name>
 						<ViewFlags type="key">1</ViewFlags>

@@ -4,8 +4,8 @@
 
    Definition of function that initializes the global TRC pointers
 
-   RTI1006 7.14 (02-May-2020)
-   Mon May  2 10:16:49 2022
+   RTI1006 7.13 (02-Nov-2019)
+   Mon May  2 10:38:15 2022
 
    Copyright 2022, dSPACE GmbH. All rights reserved.
 

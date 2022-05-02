@@ -5,8 +5,8 @@
    Definition of functions and variables for the system I/O and for
    the hardware and software interrupts used.
 
-   RTI1006 7.14 (02-May-2020)
-   Mon May  2 10:16:49 2022
+   RTI1006 7.13 (02-Nov-2019)
+   Mon May  2 10:38:15 2022
 
    Copyright 2022, dSPACE GmbH. All rights reserved.
 
@@ -107,7 +107,7 @@ static void rti_mdl_initialize_io_boards(void)
   /* Registering of RTI products and modules at VCM */
   {
     vcm_module_register(VCM_MID_RTI1006, (void *) 0,
-                        VCM_TXT_RTI1006, 7, 14, 0,
+                        VCM_TXT_RTI1006, 7, 13, 0,
                         VCM_VERSION_RELEASE, 0, 0, 0, VCM_CTRL_NO_ST);
 
     {

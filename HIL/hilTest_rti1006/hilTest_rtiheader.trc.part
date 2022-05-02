@@ -15,10 +15,10 @@
 -- _application "hilTest.map"
 
 _genname     "RTI"
-_genversion  "7.14"
-_gendate     "05/02/2022 10:16:52"
+_genversion  "7.13"
+_gendate     "05/02/2022 10:38:18"
 _description ""
-_author      "RTI1006 7.14 (02-May-2020)"
+_author      "RTI1006 7.13 (02-Nov-2019)"
 _model       "hilTest"
 
 -- Default data type formats

@@ -27,6 +27,34 @@
 				<item>
 					<Name type="key">Variable Descriptions</Name>
 					<ViewFlags type="key">0</ViewFlags>
+					<item>
+						<Name type="key">dispHIL.vdb</Name>
+						<ViewFlags type="key">1</ViewFlags>
+					</item>
+					<item>
+						<Name type="key">hiltest.sdf</Name>
+						<ViewFlags type="key">0</ViewFlags>
+						<item>
+							<Name type="key">hiltest.trc</Name>
+							<ViewFlags type="key">1</ViewFlags>
+						</item>
+						<item>
+							<Name type="key">hiltest.map</Name>
+							<ViewFlags type="key">1</ViewFlags>
+						</item>
+						<item>
+							<Name type="key">hiltest.x86</Name>
+							<ViewFlags type="key">1</ViewFlags>
+						</item>
+						<item>
+							<Name type="key">hiltest.trz</Name>
+							<ViewFlags type="key">1</ViewFlags>
+						</item>
+						<item>
+							<Name type="key">hiltest_RTICANMM.cancfg</Name>
+							<ViewFlags type="key">1</ViewFlags>
+						</item>
+					</item>
 				</item>
 				<item>
 					<Name type="key">Data Sets</Name>

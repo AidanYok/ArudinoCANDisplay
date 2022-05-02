@@ -1,4 +1,4 @@
--c "-BC:/Program Files/dSPACE RCPHIL 2020-A/Compiler/X86Tools/BIN"
+-c "-BC:/Program Files/dSPACE RCPHIL 2019-B/Compiler/X86Tools/BIN"
 -pipe
 -mpreferred-stack-boundary=3
 -march=opteron
@@ -26,26 +26,25 @@ RTICANMM_MAIN_CAN.o86
 -D_DS1006
 -DRTI_BUILD
 -DRTI_ASSERTION_MODE=RTI_ASSERTION_MODE_OFF
--DNUMBER_INCREASED_SIMSTEPS=1
 -DSSTATE=RUN
 -DSMODE=RTSIM
 -DRTT_ENABLE
 -I.
 -I..
-"-IC:/Program Files/dSPACE RCPHIL 2020-A/DS1006/RTPython"
-"-IC:/Program Files/dSPACE RCPHIL 2020-A/BusImplementationSoftware/BusCustomCode"
-"-IC:/Program Files/dSPACE RCPHIL 2020-A/Compiler/X86Tools/INCLUDE/NEWLIB"
-"-IC:/Program Files/dSPACE RCPHIL 2020-A/DS1006/RTKernel"
-"-IC:/Program Files/dSPACE RCPHIL 2020-A/DS1006/RTLib"
-"-IC:/Program Files/dSPACE RCPHIL 2020-A/MATLAB/RTI/RTI/C"
-"-IC:/Program Files/dSPACE RCPHIL 2020-A/MATLAB/RTI/RTI/SFcn"
-"-IC:/Program Files/dSPACE RCPHIL 2020-A/MATLAB/RTI/RTI1006/C"
-"-IC:/Program Files/dSPACE RCPHIL 2020-A/MATLAB/RTI/RTI1006/SFcn"
+"-IC:/Program Files/dSPACE RCPHIL 2019-B/DS1006/RTPython"
+"-IC:/Program Files/dSPACE RCPHIL 2019-B/BusImplementationSoftware/BusCustomCode"
+"-IC:/Program Files/dSPACE RCPHIL 2019-B/Compiler/X86Tools/INCLUDE/NEWLIB"
+"-IC:/Program Files/dSPACE RCPHIL 2019-B/DS1006/RTKernel"
+"-IC:/Program Files/dSPACE RCPHIL 2019-B/DS1006/RTLib"
+"-IC:/Program Files/dSPACE RCPHIL 2019-B/MATLAB/RTI/RTI/C"
+"-IC:/Program Files/dSPACE RCPHIL 2019-B/MATLAB/RTI/RTI/SFcn"
+"-IC:/Program Files/dSPACE RCPHIL 2019-B/MATLAB/RTI/RTI1006/C"
+"-IC:/Program Files/dSPACE RCPHIL 2019-B/MATLAB/RTI/RTI1006/SFcn"
 -IC:/PROGRA~1/MATLAB/R2019b/simulink/include
 -IC:/PROGRA~1/MATLAB/R2019b/extern/include
 -IC:/PROGRA~1/MATLAB/R2019b/rtw/c/src
 -IC:/PROGRA~1/MATLAB/R2019b/rtw/c/src/ext_mode/common
--IC:/Users/uweco/Desktop/Git/ArudinoCANDisplay/HIL
--IC:/Users/uweco/Desktop/Git/ArudinoCANDisplay/HIL/hilTest_rti1006
--IC:/Users/uweco/Desktop/Git/ArudinoCANDisplay/HIL/RTICANMM_FILES
+-IC:/Users/UWECOCAR3/Desktop/aiiiiiiiidan/Git/ArudinoCANDisplay/HIL
+-IC:/Users/UWECOCAR3/Desktop/aiiiiiiiidan/Git/ArudinoCANDisplay/HIL/hilTest_rti1006
+-IC:/Users/UWECOCAR3/Desktop/aiiiiiiiidan/Git/ArudinoCANDisplay/HIL/RTICANMM_FILES
 -IC:/PROGRA~1/DSPACE~4/MATLAB/RTICANMM/C 

@@ -11,9 +11,9 @@
 #  AUTHOR(S):
 #    J. Hagendorf
 #
-#  Copyright 2019, dSPACE GmbH. All rights reserved.
+#  Copyright 2015, dSPACE GmbH. All rights reserved.
 #
-#  $RCSfile: rti1006.tmf $ $Revision: 2.114 $ $Date: 2020/01/13 12:18:32CET $
+#  $RCSfile: rti1006.tmf $ $Revision: 2.112 $ $Date: 2019/06/21 11:04:20CEST $
 #  $ProjectName: e:/ARC/Products/ImplSW/RTISW/RTI/Components/Build/Makefile/project.pj $
 # =============================================================================
 # NEVER CHANGE THIS LINE:
@@ -100,7 +100,7 @@ COMPUTER                       = PCWIN64
 MODEL                          = hilTest
 MODULES                        = rt_matrx.c rt_printf.c hilTest_data.c hilTest_rticanmm.c hilTest_trc_ptr.c rtGetInf.c rtGetNaN.c rt_nonfinite.c RTICANMMGetSimTime.c RTICANMM_MAIN_CAN.c RTICANMM_SETUP_CAVPCM.c
 S_FUNCTIONS                    = 
-S_FUNCTIONS_LIB                = "C:\Program Files\dSPACE RCPHIL 2020-A\Compiler\X86Tools\lib\libsupc++.a" "C:\Program Files\dSPACE RCPHIL 2020-A\Compiler\X86Tools\lib\libstlport.a"
+S_FUNCTIONS_LIB                = "C:\Program Files\dSPACE RCPHIL 2019-B\Compiler\X86Tools\lib\libsupc++.a" "C:\Program Files\dSPACE RCPHIL 2019-B\Compiler\X86Tools\lib\libstlport.a"
 SOLVER                         = 
 NUMST                          = 2
 TID01EQ                        = 1
@@ -109,7 +109,7 @@ EXT_MODE                       = 0
 MULTITASKING                   = 0
 # Support for parallel computing
 MASTER_ANCHOR_DIR              = 
-START_DIR                      = C:\Users\uweco\Desktop\Git\ArudinoCANDisplay\HIL
+START_DIR                      = C:\Users\UWECOCAR3\Desktop\aiiiiiiiidan\Git\ArudinoCANDisplay\HIL
 # Shared library for utility code
 RTW_SHARED_LIB_SRCS_WILD       = 
 RTW_SHARED_LIB_SRCS_DIR        = 
@@ -148,9 +148,6 @@ $(_TMP_OPTION_NAME)             := $($(_TMP_OPTION_NAME),'=,"=)
 
 CC_OPTS                          = 
 CC_OPTS                         := $(CC_OPTS,'=,"=)
-
-FSI_VALUE                         = 0
-NIS_VALUE                         = 1
 
 CC_OPT_OPTS                      = USE_DEFAULT
 CC_OPT_OPTS                     := $(CC_OPT_OPTS,'=,"=)
@@ -804,14 +801,6 @@ DEFINE_OPTS = \
 
 DEFINE_CXX_OPTS = -U_INLINE
 
-%if $(FSI_VALUE)>0
-%  set DEFINE_OPTS += -DINITIAL_SIMSTEP_INCREASEMENT=$(FSI_VALUE)
-%endif
-
-%if $(NIS_VALUE)>0
-%  set DEFINE_OPTS += -DNUMBER_INCREASED_SIMSTEPS=$(NIS_VALUE)
-%endif
-
 %if !defined(_IS_MP_BUILD)
 %  set DEFINE_OPTS += $(SSTATE_OPT)  
 %  set DEFINE_OPTS += $(SMODE_OPT)
@@ -1189,9 +1178,6 @@ make_init :
 # -----------------------------------------------------------------------------
 # Rules to build the program
 # -----------------------------------------------------------------------------
-
-# Use timestamps instead of file checksums to determine whether binary files must be regenerated
-DO_NOT_USE_CHECKSUMS	= 1
 
 compile_deps : \
 	model_deps \
