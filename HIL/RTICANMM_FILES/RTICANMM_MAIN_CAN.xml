@@ -1,0 +1,1627 @@
+<Type>MainBlock</Type>
+<GenInfo>
+   <Ver>5.4.737888.359837963</Ver>
+   <Var>1</Var>
+   <CANName>CAN</CANName>
+   <CANUniqueID>1</CANUniqueID>
+   <CANFDSupport>OFF</CANFDSupport>
+   <CapMsgs>
+      <A>OFF</A>
+   </CapMsgs>
+   <GW>OFF</GW>
+   <J1939>OFF</J1939>
+   <CRCs attCount="0"/>
+   <NoFreeIds>0</NoFreeIds>
+   <NoRTTMsgs>0</NoRTTMsgs>
+</GenInfo>
+<TRCInfos>
+   <TRCPrefixGlobal>BusSystems/CAN/CAN</TRCPrefixGlobal>
+   <TRCPrefixMsg>
+      <RX>BusSystems/CAN/CAN/%MsgName%/RX/</RX>
+      <TX>BusSystems/CAN/CAN/%MsgName%/TX/</TX>
+      <Capt>BusSystems/CAN/CAN/%MsgName%/</Capt>
+   </TRCPrefixMsg>
+</TRCInfos>
+<Settings>
+   <Global>
+      <Generic>
+         <GlobalVar attName="En">
+            <InportDefault>0</InportDefault>
+            <Logic>-</Logic>
+            <Source>TRC</Source>
+            <TN>GlobalEnable</TN>
+            <DN>GlobalEnable</DN>
+         </GlobalVar>
+         <GlobalVar attName="EnTx">
+            <InportDefault>0</InportDefault>
+            <Logic>-</Logic>
+            <Source>TRC</Source>
+            <TN>GlobalEnableTX</TN>
+            <DN>GlobalEnableTX</DN>
+         </GlobalVar>
+         <GlobalVar attName="Var">
+            <TN>Variation</TN>
+            <DN>Variation</DN>
+         </GlobalVar>
+         <GlobalVar attName="MaxMessagesPerStep">
+            <TN>MaxMessagesPerStep</TN>
+            <DN>Maximum TX Messages per SampleStep</DN>
+         </GlobalVar>
+      </Generic>
+   </Global>
+   <ECUs attCount="3">
+      <ECU>
+         <Name>CAV</Name>
+         <NodeIndex>1</NodeIndex>
+         <Generic></Generic>
+      </ECU>
+      <ECU>
+         <Name>PCM</Name>
+         <NodeIndex>2</NodeIndex>
+         <Generic>
+            <ECUVar attName="En">
+               <InportDefault>0</InportDefault>
+               <Logic>-</Logic>
+               <Source>TRC</Source>
+               <TN>PCM_Enable</TN>
+               <DN>PCM</DN>
+            </ECUVar>
+         </Generic>
+      </ECU>
+      <ECU>
+         <Name>Vector__XXX</Name>
+         <NodeIndex>3</NodeIndex>
+         <Generic></Generic>
+      </ECU>
+   </ECUs>
+   <Msgs attCount="18">
+      <Msg ID="1040" Name="CavToPcmLateralCtrl1" DBCName="CavToPcmLateralCtrl1" DBCID="1040">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLateralCtrl1_ID</TN>
+                  <DN>CavToPcmLateralCtrl1_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLateralCtrl1_Length</TN>
+                  <DN>CavToPcmLateralCtrl1_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLateralCtrl1_IDFormat</TN>
+                  <DN>CavToPcmLateralCtrl1_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLateralCtrl1_status</TN>
+                  <DN>CavToPcmLateralCtrl1_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLateralCtrl1_time</TN>
+                  <DN>CavToPcmLateralCtrl1_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLateralCtrl1_dt</TN>
+                  <DN>CavToPcmLateralCtrl1_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="2">
+            <Sgn attName="CavToPcmLat1_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat1_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLat1_PV" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat1_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1041" Name="CavToPcmLateralCtrl2" DBCName="CavToPcmLateralCtrl2" DBCID="1041">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLateralCtrl2_ID</TN>
+                  <DN>CavToPcmLateralCtrl2_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLateralCtrl2_Length</TN>
+                  <DN>CavToPcmLateralCtrl2_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLateralCtrl2_IDFormat</TN>
+                  <DN>CavToPcmLateralCtrl2_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLateralCtrl2_status</TN>
+                  <DN>CavToPcmLateralCtrl2_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLateralCtrl2_time</TN>
+                  <DN>CavToPcmLateralCtrl2_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLateralCtrl2_dt</TN>
+                  <DN>CavToPcmLateralCtrl2_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="2">
+            <Sgn attName="CavToPcmLat2_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat2_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLat2_PV" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat2_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1042" Name="CavToPcmLateralCtrl3" DBCName="CavToPcmLateralCtrl3" DBCID="1042">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLateralCtrl3_ID</TN>
+                  <DN>CavToPcmLateralCtrl3_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLateralCtrl3_Length</TN>
+                  <DN>CavToPcmLateralCtrl3_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLateralCtrl3_IDFormat</TN>
+                  <DN>CavToPcmLateralCtrl3_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLateralCtrl3_status</TN>
+                  <DN>CavToPcmLateralCtrl3_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLateralCtrl3_time</TN>
+                  <DN>CavToPcmLateralCtrl3_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLateralCtrl3_dt</TN>
+                  <DN>CavToPcmLateralCtrl3_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="2">
+            <Sgn attName="CavToPcmLat3_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat3_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLat3_PV" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat3_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1043" Name="CavToPcmLateralCtrl4" DBCName="CavToPcmLateralCtrl4" DBCID="1043">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLateralCtrl4_ID</TN>
+                  <DN>CavToPcmLateralCtrl4_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLateralCtrl4_Length</TN>
+                  <DN>CavToPcmLateralCtrl4_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLateralCtrl4_IDFormat</TN>
+                  <DN>CavToPcmLateralCtrl4_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLateralCtrl4_status</TN>
+                  <DN>CavToPcmLateralCtrl4_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLateralCtrl4_time</TN>
+                  <DN>CavToPcmLateralCtrl4_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLateralCtrl4_dt</TN>
+                  <DN>CavToPcmLateralCtrl4_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="2">
+            <Sgn attName="CavToPcmLat4_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat4_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLat4_PV" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat4_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1044" Name="CavToPcmLateralCtrl5" DBCName="CavToPcmLateralCtrl5" DBCID="1044">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLateralCtrl5_ID</TN>
+                  <DN>CavToPcmLateralCtrl5_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLateralCtrl5_Length</TN>
+                  <DN>CavToPcmLateralCtrl5_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLateralCtrl5_IDFormat</TN>
+                  <DN>CavToPcmLateralCtrl5_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLateralCtrl5_status</TN>
+                  <DN>CavToPcmLateralCtrl5_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLateralCtrl5_time</TN>
+                  <DN>CavToPcmLateralCtrl5_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLateralCtrl5_dt</TN>
+                  <DN>CavToPcmLateralCtrl5_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="2">
+            <Sgn attName="CavToPcmLat5_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat5_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLat5_PV" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat5_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1045" Name="CavToPcmLateralCtrl6" DBCName="CavToPcmLateralCtrl6" DBCID="1045">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLateralCtrl6_ID</TN>
+                  <DN>CavToPcmLateralCtrl6_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLateralCtrl6_Length</TN>
+                  <DN>CavToPcmLateralCtrl6_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLateralCtrl6_IDFormat</TN>
+                  <DN>CavToPcmLateralCtrl6_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLateralCtrl6_status</TN>
+                  <DN>CavToPcmLateralCtrl6_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLateralCtrl6_time</TN>
+                  <DN>CavToPcmLateralCtrl6_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLateralCtrl6_dt</TN>
+                  <DN>CavToPcmLateralCtrl6_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="2">
+            <Sgn attName="CavToPcmLat6_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat6_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLat6_PV" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLat6_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1056" Name="CavToPcmLongCtrl1" DBCName="CavToPcmLongCtrl1" DBCID="1056">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLongCtrl1_ID</TN>
+                  <DN>CavToPcmLongCtrl1_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLongCtrl1_Length</TN>
+                  <DN>CavToPcmLongCtrl1_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLongCtrl1_IDFormat</TN>
+                  <DN>CavToPcmLongCtrl1_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLongCtrl1_status</TN>
+                  <DN>CavToPcmLongCtrl1_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLongCtrl1_time</TN>
+                  <DN>CavToPcmLongCtrl1_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLongCtrl1_dt</TN>
+                  <DN>CavToPcmLongCtrl1_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="4">
+            <Sgn attName="CavToPcmLong1_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong1_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="obj1_pos" attStartBit="0">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="obj1_pos"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="obj1_vel" attStartBit="12">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="obj1_vel"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLong1_PV" attStartBit="28">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong1_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1057" Name="CavToPcmLongCtrl2" DBCName="CavToPcmLongCtrl2" DBCID="1057">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLongCtrl2_ID</TN>
+                  <DN>CavToPcmLongCtrl2_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLongCtrl2_Length</TN>
+                  <DN>CavToPcmLongCtrl2_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLongCtrl2_IDFormat</TN>
+                  <DN>CavToPcmLongCtrl2_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLongCtrl2_status</TN>
+                  <DN>CavToPcmLongCtrl2_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLongCtrl2_time</TN>
+                  <DN>CavToPcmLongCtrl2_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLongCtrl2_dt</TN>
+                  <DN>CavToPcmLongCtrl2_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="2">
+            <Sgn attName="CavToPcmLong2_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong2_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLong2_PV" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong2_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1058" Name="CavToPcmLongCtrl3" DBCName="CavToPcmLongCtrl3" DBCID="1058">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLongCtrl3_ID</TN>
+                  <DN>CavToPcmLongCtrl3_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLongCtrl3_Length</TN>
+                  <DN>CavToPcmLongCtrl3_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLongCtrl3_IDFormat</TN>
+                  <DN>CavToPcmLongCtrl3_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLongCtrl3_status</TN>
+                  <DN>CavToPcmLongCtrl3_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLongCtrl3_time</TN>
+                  <DN>CavToPcmLongCtrl3_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLongCtrl3_dt</TN>
+                  <DN>CavToPcmLongCtrl3_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="2">
+            <Sgn attName="CavToPcmLong3_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong3_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLong3_PV" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong3_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1059" Name="CavToPcmLongCtrl4" DBCName="CavToPcmLongCtrl4" DBCID="1059">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLongCtrl4_ID</TN>
+                  <DN>CavToPcmLongCtrl4_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLongCtrl4_Length</TN>
+                  <DN>CavToPcmLongCtrl4_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLongCtrl4_IDFormat</TN>
+                  <DN>CavToPcmLongCtrl4_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLongCtrl4_status</TN>
+                  <DN>CavToPcmLongCtrl4_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLongCtrl4_time</TN>
+                  <DN>CavToPcmLongCtrl4_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLongCtrl4_dt</TN>
+                  <DN>CavToPcmLongCtrl4_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="2">
+            <Sgn attName="CavToPcmLong4_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong4_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLong4_PV" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong4_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1060" Name="CavToPcmLongCtrl5" DBCName="CavToPcmLongCtrl5" DBCID="1060">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLongCtrl5_ID</TN>
+                  <DN>CavToPcmLongCtrl5_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLongCtrl5_Length</TN>
+                  <DN>CavToPcmLongCtrl5_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLongCtrl5_IDFormat</TN>
+                  <DN>CavToPcmLongCtrl5_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLongCtrl5_status</TN>
+                  <DN>CavToPcmLongCtrl5_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLongCtrl5_time</TN>
+                  <DN>CavToPcmLongCtrl5_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLongCtrl5_dt</TN>
+                  <DN>CavToPcmLongCtrl5_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="2">
+            <Sgn attName="CavToPcmLong5_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong5_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLong5_PV" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong5_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1061" Name="CavToPcmLongCtrl6" DBCName="CavToPcmLongCtrl6" DBCID="1061">
+         <ECU>CAV</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>CavToPcmLongCtrl6_ID</TN>
+                  <DN>CavToPcmLongCtrl6_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>CavToPcmLongCtrl6_Length</TN>
+                  <DN>CavToPcmLongCtrl6_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>CavToPcmLongCtrl6_IDFormat</TN>
+                  <DN>CavToPcmLongCtrl6_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>CavToPcmLongCtrl6_status</TN>
+                  <DN>CavToPcmLongCtrl6_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>CavToPcmLongCtrl6_time</TN>
+                  <DN>CavToPcmLongCtrl6_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>CavToPcmLongCtrl6_dt</TN>
+                  <DN>CavToPcmLongCtrl6_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="2">
+            <Sgn attName="CavToPcmLong6_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong6_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="CavToPcmLong6_PV" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="CavToPcmLong6_PV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1072" Name="PcmToCav1" DBCName="PcmToCav1" DBCID="1072">
+         <ECU>PCM</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>3</Dir>
+         <Vars attCount="0"/>
+         <TX>
+            <Generic>
+               <TXVar attName="CEn">
+                  <TN>PcmToCav1_CheckEnable</TN>
+                  <DN>CheckEnable</DN>
+               </TXVar>
+               <TXVar attName="En">
+                  <InportDefault>0</InportDefault>
+                  <Logic>-</Logic>
+                  <Source>TRC</Source>
+                  <TN>PcmToCav1_Enable</TN>
+                  <DN>Enable</DN>
+               </TXVar>
+               <TXVar attName="Cyclic">
+                  <InportDefault>0</InportDefault>
+                  <Logic>-</Logic>
+                  <Source>TRC</Source>
+                  <TN>PcmToCav1_PeriodicalOn</TN>
+                  <DN>PeriodicalOn</DN>
+               </TXVar>
+               <TXVar attName="Kout">
+                  <TN>PcmToCav1_Kickout</TN>
+                  <DN>Kickout</DN>
+                  <Type>Button</Type>
+               </TXVar>
+               <TXVar attName="Delay">
+                  <TN>PcmToCav1_DelayTime</TN>
+                  <DN>DelayTime</DN>
+                  <Type>Display</Type>
+               </TXVar>
+               <TXVar attName="Status">
+                  <TN>PcmToCav1_status</TN>
+                  <DN>PcmToCav1_status</DN>
+                  <Type>Display</Type>
+               </TXVar>
+               <TXVar attName="CycleTime">
+                  <TN>PcmToCav1_CycleTime</TN>
+                  <DN>CycleTime</DN>
+                  <Type>Input</Type>
+               </TXVar>
+            </Generic>
+            <ERD>
+               <A>OFF</A>
+               <ERDTRC>
+                  <A>OFF</A>
+                  <ByteMap attIdx="1">
+                     <TN>PcmToCav1_RAW_byte_1</TN>
+                     <DN>RAWswitch_1</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="2">
+                     <TN>PcmToCav1_RAW_byte_2</TN>
+                     <DN>RAWswitch_2</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="3">
+                     <TN>PcmToCav1_RAW_byte_3</TN>
+                     <DN>RAWswitch_3</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="4">
+                     <TN>PcmToCav1_RAW_byte_4</TN>
+                     <DN>RAWswitch_4</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="5">
+                     <TN>PcmToCav1_RAW_byte_5</TN>
+                     <DN>RAWswitch_5</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="6">
+                     <TN>PcmToCav1_RAW_byte_6</TN>
+                     <DN>RAWswitch_6</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="7">
+                     <TN>PcmToCav1_RAW_byte_7</TN>
+                     <DN>RAWswitch_7</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="8">
+                     <TN>PcmToCav1_RAW_byte_8</TN>
+                     <DN>RAWswitch_8</DN>
+                  </ByteMap>
+               </ERDTRC>
+               <Switch>
+                  <A>OFF</A>
+                  <TN>PcmToCav1_RAW_switch</TN>
+                  <DN>RAWswitch</DN>
+               </Switch>
+            </ERD>
+            <RDD>
+               <A>OFF</A>
+            </RDD>
+         </TX>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>PcmToCav1_ID</TN>
+                  <DN>PcmToCav1_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>PcmToCav1_Length</TN>
+                  <DN>PcmToCav1_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>PcmToCav1_IDFormat</TN>
+                  <DN>PcmToCav1_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>PcmToCav1_status</TN>
+                  <DN>PcmToCav1_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>PcmToCav1_time</TN>
+                  <DN>PcmToCav1_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>PcmToCav1_dt</TN>
+                  <DN>PcmToCav1_dt</DN>
+               </RXVar>
+               <RXVar attName="CycleTime">
+                  <TN>PcmToCav1_CycleTime</TN>
+                  <DN>CycleTime</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="4">
+            <Sgn attName="PcmToCav1_RC" attStartBit="56">
+               <Generics></Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="PcmToCav1_RC"/>
+                        <SgnTXVar attName="GW" attValue="PcmToCav1_RC_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="PcmToCav1_RC_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="PcmToCav1_RC_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="PcmToCav1_RC_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="PcmToCav1_RC_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="PcmToCav1_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="veh_spd" attStartBit="0">
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="veh_spd"/>
+                        <SgnTXVar attName="GW" attValue="veh_spd_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="veh_spd_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="veh_spd_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="veh_spd_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="veh_spd_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="veh_spd"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="connect_swch_stat" attStartBit="16">
+               <Generics></Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="connect_swch_stat"/>
+                        <SgnTXVar attName="GW" attValue="connect_swch_stat_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="connect_swch_stat_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="connect_swch_stat_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="connect_swch_stat_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="connect_swch_stat_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="connect_swch_stat"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="long_swch_stat" attStartBit="17">
+               <Generics></Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="long_swch_stat"/>
+                        <SgnTXVar attName="GW" attValue="long_swch_stat_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="long_swch_stat_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="long_swch_stat_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="long_swch_stat_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="long_swch_stat_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="long_swch_stat"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1073" Name="PcmToCav2" DBCName="PcmToCav2" DBCID="1073">
+         <ECU>PCM</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>PcmToCav2_ID</TN>
+                  <DN>PcmToCav2_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>PcmToCav2_Length</TN>
+                  <DN>PcmToCav2_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>PcmToCav2_IDFormat</TN>
+                  <DN>PcmToCav2_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>PcmToCav2_status</TN>
+                  <DN>PcmToCav2_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>PcmToCav2_time</TN>
+                  <DN>PcmToCav2_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>PcmToCav2_dt</TN>
+                  <DN>PcmToCav2_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="10">
+            <Sgn attName="PcmToCav2_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="PcmToCav2_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="BattSOC" attStartBit="0">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="BattSOC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="iceOnly" attStartBit="7">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="iceOnly"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="BattTemp" attStartBit="8">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="BattTemp"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="BattCurrent" attStartBit="16">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="BattCurrent"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="EngTemp" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="EngTemp"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="regenEnbld" attStartBit="31">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="regenEnbld"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="eRadTemp" attStartBit="32">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="eRadTemp"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="egoDistance" attStartBit="40">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="egoDistance"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="BattV" attStartBit="47">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="BattV"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1074" Name="PcmToCav3" DBCName="PcmToCav3" DBCID="1074">
+         <ECU>PCM</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>PcmToCav3_ID</TN>
+                  <DN>PcmToCav3_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>PcmToCav3_Length</TN>
+                  <DN>PcmToCav3_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>PcmToCav3_IDFormat</TN>
+                  <DN>PcmToCav3_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>PcmToCav3_status</TN>
+                  <DN>PcmToCav3_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>PcmToCav3_time</TN>
+                  <DN>PcmToCav3_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>PcmToCav3_dt</TN>
+                  <DN>PcmToCav3_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="8">
+            <Sgn attName="PcmToCav3_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="PcmToCav3_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="uwACCAct" attStartBit="0">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="uwACCAct"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="targetGap" attStartBit="1">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="targetGap"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="cavLondgAct" attStartBit="8">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="cavLondgAct"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="setSpd" attStartBit="16">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="setSpd"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="targetDist" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="targetDist"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="accDecelCmd" attStartBit="32">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="accDecelCmd"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="driverIntervention" attStartBit="48">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="driverIntervention"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1075" Name="PcmToCav4" DBCName="PcmToCav4" DBCID="1075">
+         <ECU>PCM</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>PcmToCav4_ID</TN>
+                  <DN>PcmToCav4_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>PcmToCav4_Length</TN>
+                  <DN>PcmToCav4_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>PcmToCav4_IDFormat</TN>
+                  <DN>PcmToCav4_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>PcmToCav4_status</TN>
+                  <DN>PcmToCav4_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>PcmToCav4_time</TN>
+                  <DN>PcmToCav4_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>PcmToCav4_dt</TN>
+                  <DN>PcmToCav4_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="10">
+            <Sgn attName="PcmToCav4_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="PcmToCav4_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="ccFault" attStartBit="1">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="ccFault"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="hybridFault" attStartBit="2">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="hybridFault"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="propFault" attStartBit="3">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="propFault"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="grndFault" attStartBit="4">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="grndFault"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="magnaEradFault" attStartBit="5">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="magnaEradFault"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="uwEradFault" attStartBit="6">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="uwEradFault"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="cntrFault" attStartBit="7">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="cntrFault"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="ACCFault" attStartBit="14">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="ACCFault"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="uwFaults" attStartBit="23">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="uwFaults"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1076" Name="PcmToCav5" DBCName="PcmToCav5" DBCID="1076">
+         <ECU>PCM</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>PcmToCav5_ID</TN>
+                  <DN>PcmToCav5_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>PcmToCav5_Length</TN>
+                  <DN>PcmToCav5_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>PcmToCav5_IDFormat</TN>
+                  <DN>PcmToCav5_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>PcmToCav5_status</TN>
+                  <DN>PcmToCav5_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>PcmToCav5_time</TN>
+                  <DN>PcmToCav5_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>PcmToCav5_dt</TN>
+                  <DN>PcmToCav5_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="1">
+            <Sgn attName="PcmToCav5_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="PcmToCav5_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="1077" Name="PcmToCav6" DBCName="PcmToCav6" DBCID="1077">
+         <ECU>PCM</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>PcmToCav6_ID</TN>
+                  <DN>PcmToCav6_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>PcmToCav6_Length</TN>
+                  <DN>PcmToCav6_Length</DN>
+               </RXVar>
+               <RXVar attName="IDFormat">
+                  <TN>PcmToCav6_IDFormat</TN>
+                  <DN>PcmToCav6_IDFormat</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>PcmToCav6_status</TN>
+                  <DN>PcmToCav6_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>PcmToCav6_time</TN>
+                  <DN>PcmToCav6_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>PcmToCav6_dt</TN>
+                  <DN>PcmToCav6_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="1">
+            <Sgn attName="PcmToCav6_RC" attStartBit="56">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="PcmToCav6_RC"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+   </Msgs>
+</Settings>

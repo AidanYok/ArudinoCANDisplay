@@ -1,0 +1,343 @@
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+	group "Clock" -- block-group
+	{
+	 block: "Clock"
+	}
+		p_0_hilTest_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Clock"
+
+	group "Reset@RTICANMM\nControllerSetup" -- block-group
+	{
+	 block: "Constant"
+	}
+		p_0_hilTest_boolean_T_3[0]
+		{
+		 type:    uint(8)*
+		 alias:   "Out1"
+		 range:   < 0 ; 1 >
+		 bitmask: 0x01
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_hilTest_boolean_T_1[0]
+		{
+		 type:    uint(8)*
+		 alias:   "Value"
+		 range:   < 0 ; 1 >
+		 bitmask: 0x01
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Reset@RTICANMM\nControllerSetup"
+
+	group "Variation@RTICANMM\nControllerSetup" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		p_1_hilTest_uint8_T_2[0]
+		{
+		 type:    uint(8)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Variation@RTICANMM\nControllerSetup"
+
+  
+  
+	group "RTI Data" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "RTICANMM\nControllerSetup" -- subsystem-group
+
+		p_0_hilTest_int32_T_1[0]
+		{
+		 type:    int(32)*
+		 alias:   "BUS_STATE"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_hilTest_int32_T_1[1]
+		{
+		 type:    int(32)*
+		 alias:   "STATUS_STUFF_BIT_ERROR"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_hilTest_int32_T_1[2]
+		{
+		 type:    int(32)*
+		 alias:   "STATUS_FORM_ERROR"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_hilTest_int32_T_1[3]
+		{
+		 type:    int(32)*
+		 alias:   "STATUS_ACK_ERROR"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_hilTest_int32_T_1[4]
+		{
+		 type:    int(32)*
+		 alias:   "STATUS_BIT0_ERROR"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_hilTest_int32_T_1[5]
+		{
+		 type:    int(32)*
+		 alias:   "STATUS_BIT1_ERROR"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_hilTest_int32_T_1[6]
+		{
+		 type:    int(32)*
+		 alias:   "STATUS_CRC_ERROR"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_hilTest_int32_T_1[7]
+		{
+		 type:    int(32)*
+		 alias:   "STATUS_LOST_RX_NUM"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_hilTest_int32_T_1[8]
+		{
+		 type:    int(32)*
+		 alias:   "STATUS_REC_RX_NUM"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_hilTest_int32_T_1[9]
+		{
+		 type:    int(32)*
+		 alias:   "STATUS_SENT_TX_NUM"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+		group "Variation_DTC" -- block-group
+		{
+		 block: "DataTypeConversion"
+		}
+			p_0_hilTest_uint8_T_2[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Variation_DTC"
+
+		group "RTICANMMCHANNEL_TLC" -- block-group
+		{
+		 block: "S-Function"
+		}
+
+
+			p_1_hilTest_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P1"
+			 flags:   PARAM
+			}
+			p_1_hilTest_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P2"
+			 flags:   PARAM
+			}
+			p_1_hilTest_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P3"
+			 flags:   PARAM
+			}
+			p_1_hilTest_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P4"
+			 flags:   PARAM
+			}
+			p_1_hilTest_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P5"
+			 flags:   PARAM
+			}
+			p_1_hilTest_real_T_0[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P6"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "RTICANMMCHANNEL_TLC"
+
+		group "sfcn" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_hilTest_int32_T_1[0]
+			{
+			 type:    int(32)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_hilTest_int32_T_1[1]
+			{
+			 type:    int(32)*
+			 alias:   "Out2"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_hilTest_int32_T_1[2]
+			{
+			 type:    int(32)*
+			 alias:   "Out3"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_hilTest_int32_T_1[3]
+			{
+			 type:    int(32)*
+			 alias:   "Out4"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_hilTest_int32_T_1[4]
+			{
+			 type:    int(32)*
+			 alias:   "Out5"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_hilTest_int32_T_1[5]
+			{
+			 type:    int(32)*
+			 alias:   "Out6"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_hilTest_int32_T_1[6]
+			{
+			 type:    int(32)*
+			 alias:   "Out7"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_hilTest_int32_T_1[7]
+			{
+			 type:    int(32)*
+			 alias:   "Out8"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_hilTest_int32_T_1[8]
+			{
+			 type:    int(32)*
+			 alias:   "Out9"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_hilTest_int32_T_1[9]
+			{
+			 type:    int(32)*
+			 alias:   "Out10"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "sfcn"
+
+  
+  
+		group "ModelClose" -- subsystem-group
+
+
+
+
+
+		endgroup -- subsystem-group "ModelClose"
+
+
+	endgroup -- subsystem-group "RTICANMM\nControllerSetup"
+  
+  
+	group "RTICANMM\nGeneralSetup" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTICANMM\nGeneralSetup"
+  
+  
+	group "RTICANMM\nMainBlock" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTICANMM\nMainBlock"
+  
+  
+	group "User2RTICANMM\nMainBlock" -- subsystem-group
+
+		p_0_hilTest_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "out"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+  
+  
+		group "PcmToCav1" -- subsystem-group
+
+			p_0_hilTest_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "out"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+			group "Cast" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				p_0_hilTest_real_T_0[1]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Cast"
+
+
+
+		endgroup -- subsystem-group "PcmToCav1"
+
+
+	endgroup -- subsystem-group "User2RTICANMM\nMainBlock"
+  
+  
+	group "MATLAB Function" -- subsystem-group
+
+		p_0_hilTest_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "y"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+
+
+	endgroup -- subsystem-group "MATLAB Function"
+
+
+
+endgroup -- "Model Root"

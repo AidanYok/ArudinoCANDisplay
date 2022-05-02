@@ -1,0 +1,16 @@
+[System]
+Version=2.2
+SystemType=SingleProcessorSystem
+DAQService=DsDAQ
+DsDAQBackground=1
+DAQService=HostService
+Status=Start
+RTP=Master
+
+[Master]
+Type=DS1006
+State=Enabled
+ServiceID=1
+BoardName=unknown
+File=hiltest.x86
+ID=5DC85867-CCE5-4435-995A-31912ADDD84E
