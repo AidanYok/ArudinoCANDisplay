@@ -7,7 +7,7 @@ from threading import *
 
 def main():
     msgs = ['CavToPcmLongCtrl1', 'PcmToCav1']
-    sigs = ['obj1_pos','veh_spd']
+    sigs = ['obj1_pos','veh_spd', 'long_swch_stat']
 
     loggedMsg = dict.fromkeys(msgs)
     sigVals = dict.fromkeys(sigs)
@@ -29,11 +29,10 @@ def main():
             loggedMsg = preProcessing.preprocess(loggedMsg)
             for i in msgs:
                 for j in sigs:
-                    if (loggedMsg[i] != None):
-                        try:
-                            sigVals[j].set(j + ': ' + str(dbc.deCode(i, j, loggedMsg[i].encode('UTF-8'))))
-                        except:
-                            pass
+                    try:
+                        sigVals[j].set(j + ': ' + str(dbc.deCode(i, j, loggedMsg[i].encode('UTF-8'))))
+                    except:
+                        pass
             root.update()
 
     def threading():

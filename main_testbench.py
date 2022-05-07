@@ -1,12 +1,13 @@
-import fakeData
+#import fakeData
+import preProcessing
 from tkinter import *
 import dbcManager as dbc
 import time
 from threading import *
 
 def main():
-    msgs = ['CavToPcmLongCtrl1', 'PcmToCav1', 'PcmToCav2']
-    sigs = ['obj1_pos','veh_spd', 'BattSOC']
+    msgs = ['PcmToCav1']
+    sigs = ['veh_spd']
 
     loggedMsg = dict.fromkeys(msgs)
     sigVals = dict.fromkeys(sigs)
@@ -25,22 +26,21 @@ def main():
 
     def updateMsgs(loggedMsg, root):
         while True:
-            loggedMsg = fakeData.preprocess(loggedMsg)
+            preProcessing.preprocess(loggedMsg)
             for i in msgs:
                 for j in sigs:
-                    if (loggedMsg[i] != None):
-                        try:
-                            sigVals[j].set(j + ': ' + str(dbc.deCode(i, j, loggedMsg[i].encode('UTF-8'))))
-                        except:
-                            pass
+                    try:
+                        sigVals[j].set(j + ': ' + str(dbc.deCode(i, j, loggedMsg[i].encode('UTF-8'))))
+                    except:
+                        pass
             root.update()
 
     def threading():
         t1 = Thread(target=updateMsgs(loggedMsg, root))
         t1.start()
     threading()
-    # Button(root,text="Click Me",command = threading).pack()
-    # root.attributes('-fullscreen', True)
+    Button(root,text="Click Me",command = threading).pack()
+    root.attributes('-fullscreen', True)
     root.mainloop()
 
 

@@ -4,7 +4,7 @@ import hexDecoder
 import time
 
 def getId(sData):
-    return hexDecoder.decodeId(sData[2][6:9])
+    return hexDecoder.decodeId(sData[2])
     
 def getData(sData):
     return ''.join([str(item) for item in sData[3:]])
@@ -15,15 +15,17 @@ def preprocess(loggedMsg):
    
     while (time.time() - beginTime < 2):
         try:
-            read_ser=ser.readline().decode()
+            read_ser=ser.readline().decode('utf-8').rstrip()
         except:
             read_ser = None
         if read_ser == None:
-            pass
+            break
         else:
             serialData = read_ser.split()
-            if (len(serialData) < 10):
-                pass
-            else:
-                if getId(serialData) in loggedMsg:
-                    loggedMsg[getId(serialData)] = getData(serialData)
+            if (len(serialData) > 8):
+                print(loggedMsg)
+                try:
+                    if getId(serialData) in loggedMsg:
+                        loggedMsg[getId(serialData)] = getData(serialData)
+                except:
+                    continue
